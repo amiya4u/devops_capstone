@@ -30,9 +30,10 @@ jobs:
           ECR_ REPOSITORY: flaskapp
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $ECR_REGISTRY/ECR_$REPOSITORY:$IMAGE_TAG ./Flaskapp
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./Flaskapp
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "Image pushed: $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+
 
 
 
