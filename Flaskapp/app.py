@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Define the route for the home/root URL
 @app.route('/')
 def home():
-    return 'Hello, Flask! Your web application is running.'
+    return 'DevOps Capstone v2 - pipeline is working!".'
 
 @app.route('/health')
 def health():
