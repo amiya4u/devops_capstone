@@ -27,7 +27,7 @@ jobs:
       - name: Build, tag, and push docker image to Amazon ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_ REPOSITORY: flaskapp
+          ECR_REPOSITORY: flaskapp
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./Flaskapp
